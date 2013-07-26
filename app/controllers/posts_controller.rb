@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	http_basic_authenticate_with name: "mbecker", password: "Winteristhebest", except: [:index, :show]
+	http_basic_authenticate_with name: "username", password: "password", except: [:index, :show]
 
 	def index
   		@posts = Post.all
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 	def new
   		@post = Post.new
 	end
-	 
+	 ß
 	def create
 	  @post = Post.new(params[:post].permit(:title, :text))
 	 
